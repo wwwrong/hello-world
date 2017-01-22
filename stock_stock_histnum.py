@@ -2,7 +2,6 @@
 import string
 import os
 
-
 stocklist = open("stocklist.csv")
 stocksum = open("stocksum.csv",'w')
 lines = stocklist.readlines()
@@ -14,8 +13,7 @@ for line in lines:
         stockno = 'SZ'+stockno
     else:
         stockno = 'SH'+stockno        
-
-
+        
     filename = "./hist/"+stockno+".csv"
     if not os.path.isfile(filename):
         continue
